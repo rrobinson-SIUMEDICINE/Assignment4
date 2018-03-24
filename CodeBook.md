@@ -44,31 +44,18 @@ The raw data sets are processed with the run_analisys.R script to create a tidy 
 
 Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt,
 subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain
-a single data set. Variables are labelled with the names assigned by original
-collectors (features.txt).
+a single data set. 
 
-### Extract mean and standard deviation variables
+### Extract mean and standard deviation variables extracted
 
-From the merged data set is extracted and intermediate data set with only the
-values of estimated mean (variables with labels that contain "mean") and standard
-deviation (variables with labels that contain "std").
 
-### Use descriptive activity names
+### Label variables modified
 
-A new column is added to intermediate data set with the activity description.
-Activity id column is used to look up descriptions in activity_labels.txt.
-
-### Label variables appropriately
-
-Labels given from the original collectors were changed:
-* to obtain valid R names without parentheses, dashes and commas
-* to obtain more descriptive labels
+Labels given from the original dataset to make them more readable and consistent.
 
 ### Create a tidy data set
 
-From the intermediate data set is created a final tidy data set where numeric
-variables are averaged for each activity and each subject.
+The tidy dataset was then created and exported.
 
-
-The data set is written to the file sensor_avg_by_act_sub.txt.
+The data set is written to the file tidy_data.txt.
 
